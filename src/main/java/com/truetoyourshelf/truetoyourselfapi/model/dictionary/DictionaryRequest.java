@@ -1,4 +1,4 @@
-package com.truetoyourshelf.truetoyourselfapi.model;
+package com.truetoyourshelf.truetoyourselfapi.model.dictionary;
 
 public class DictionaryRequest {
 
