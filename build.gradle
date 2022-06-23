@@ -1,7 +1,12 @@
 plugins {
-    id 'org.springframework.boot' version '2.7.0'
+    id 'org.springframework.boot' version '2.2.6.RELEASE'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+}
+
+ext {
+    swaggerVersion = '3.0.0'
+    springCloudFeignVersion = '2.2.3.RELEASE'
 }
 
 group = 'com.trueToYourshelf'
@@ -20,10 +25,18 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
+
     compileOnly 'org.projectlombok:lombok'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // Swagger dependencies
+    implementation group: 'io.springfox', name: 'springfox-boot-starter', version: "${swaggerVersion}"
+
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
+    //Feign
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: "${springCloudFeignVersion}"
 }
 
 tasks.named('test') {
