@@ -9,6 +9,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients
 public class TrueToYourselfApiApplication {
 
+
+
     public static void main(String[] args) {
         SpringApplication.run(TrueToYourselfApiApplication.class, args);
     }
