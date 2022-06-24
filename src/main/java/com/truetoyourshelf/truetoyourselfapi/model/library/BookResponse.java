@@ -3,7 +3,6 @@ package com.truetoyourshelf.truetoyourselfapi.model.library;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.truetoyourshelf.truetoyourselfapi.client.ILibraryClient;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 

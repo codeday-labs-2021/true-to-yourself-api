@@ -45,6 +45,7 @@ public class LibraryService implements ILibraryService {
 
 
 
+
     private BookResponse toBookResponse( ArrayList fullFirstResponse){
         BookResponse bookResponse = new BookResponse();
         bookResponse.setType((String) fullFirstResponse.get("sourceResource.type"));
