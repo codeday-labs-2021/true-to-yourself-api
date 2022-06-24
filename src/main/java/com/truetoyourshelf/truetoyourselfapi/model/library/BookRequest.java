@@ -23,7 +23,7 @@ public class BookRequest {
     }
 
     public String getType() {
-        return type;
+        return "text";
     }
 
     public void setType(String type) {
@@ -31,7 +31,7 @@ public class BookRequest {
     }
 
     public String getFields() {
-        return fields;
+        return "sourceResource.description,object,sourceResource.title,sourceResource.creator";
     }
 
     public void setFields(String fields) {
@@ -39,7 +39,7 @@ public class BookRequest {
     }
 
     public String getLanguage() {
-        return language;
+        return "English";
     }
 
     public void setLanguage(String language) {
@@ -62,21 +62,8 @@ public class BookRequest {
         this.apiKey = apiKey;
     }
 
-    @Override
-    public String toString() {
-        return "BookRequest{" +
-                "searchWord='" + searchWord + '\'' +
-                '}';
-    }
-
-    public BookRequest() {
-    }
-
-    public BookRequest(String searchWord, String type, String fields, String language, Integer pageSize, String apiKey) {
+    public BookRequest(String searchWord, Integer pageSize, String apiKey) {
         this.searchWord = searchWord;
-        this.type = type;
-        this.fields = fields;
-        this.language = language;
         this.pageSize = pageSize;
         this.apiKey = apiKey;
     }
